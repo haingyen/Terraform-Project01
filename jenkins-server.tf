@@ -4,6 +4,7 @@ resource "aws_instance" "jenkins_server" {
   associate_public_ip_address = true
   availability_zone = var.az
   subnet_id = aws_subnet.public_subnet.id
+  key_name = "main-key"
   vpc_security_group_ids = [aws_security_group.security_group_for_jenkins_server.id]
   user_data = file("jenkins-server-script.sh")
 

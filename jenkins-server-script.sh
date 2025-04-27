@@ -3,7 +3,7 @@
 # Install Jenkins
 
 sudo apt update
-sudo apt install -y fontconfig openjdk-21-jre
+sudo apt install -y openjdk-17-jre
 
 sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key

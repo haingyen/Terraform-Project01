@@ -36,6 +36,11 @@ resource "aws_route_table" "public_route_table" {
   }
 }
 
+resource "aws_route_table_association" "public" {
+  subnet_id = aws_subnet.public_subnet.id
+  route_table_id = aws_route_table.public_route_table.id
+}
+
 resource "aws_security_group" "security_group_for_jenkins_server" {
   vpc_id = aws_vpc.vpc.id
 
